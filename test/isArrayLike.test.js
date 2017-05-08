@@ -18,4 +18,9 @@ describe('isArrayLike()', () => {
     };
     expect(_.isArrayLike(nonArrayLikeObj)).toBe(false);
   });
+
+    it('returns true for an array-like string', () => {
+    const nonArrayLikeObj = 'stingy';
+    expect(_.isArrayLike(nonArrayLikeObj)).toBe(true);
+  });
 });

@@ -20,4 +20,9 @@ describe('identity()', () => {
     };
     expect(_.identity(val)).toBe(val);
   });
+
+  it('returns the same string if given a string', () => {
+    const val = 'stringy string';
+    expect(_.identity(val)).toBe(val);
+  });
 });

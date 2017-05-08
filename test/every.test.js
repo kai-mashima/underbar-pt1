@@ -16,6 +16,12 @@ describe('every()', () => {
       const nums = [1, 3, 5, 6, 7];
       expect(_.every(nums, num => num % 2 === 1)).toBe(false);
     });
+  });
 
+  describe('processing a string', () => {
+    it('returns true if all characters in a string are the same', () => {
+        const str = 'bbbb';
+        expect(_.every(str, str => str === 'b')).toBe(true);
+      });
   });
 });

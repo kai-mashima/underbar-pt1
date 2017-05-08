@@ -23,4 +23,9 @@ describe('filter()', () => {
     const abilityScores = _.filter(characterAttributes, (value) => !isNaN(value));
     expect(abilityScores).toEqual([4, 7, 10, 16, 5, 4]);
   });
+
+  it('filters a string to only letter', () => {
+    const str = 'racecar';
+    expect(_.filter(str, str => str === 'r')).toEqual(['r', 'r']);
+  });
 });

@@ -6,4 +6,11 @@ describe('map()', () => {
     const mappedArr = _.map(arr, (el) => el * el);
     expect(mappedArr).toEqual([1, 4, 9, 16, 25]);
   });
+
+  it('maps every numbers in an array of numbers to their square', () => {
+    const str = 'ABC';
+    const bacon = 'bacon';
+    const mappedStr = _.map(str, (el) => el + bacon);
+    expect(mappedStr).toEqual(['Abacon', 'Bbacon', 'Cbacon']);
+  });
 });

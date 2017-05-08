@@ -11,4 +11,9 @@ describe('some()', () => {
     expect(_.some(nums, num => num % 2 === 1)).toBe(false);
   });
 
+  it('returns true if a string contains a particular letter', () => {
+    const str = 'bacon';
+    expect(_.some(str, str => str === 'c')).toBe(true);
+  });
+
 });

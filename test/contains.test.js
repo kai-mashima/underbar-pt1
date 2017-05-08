@@ -31,4 +31,8 @@ describe('contains()', () => {
     expect(_.contains(ponies, 'Applejack')).toBe(false);
   });
 
+  it('returns true if an array does contain the target', () => {
+    const nums = 'bacon';
+    expect(_.contains(nums, 'o')).toBe(true);
+  });
 });

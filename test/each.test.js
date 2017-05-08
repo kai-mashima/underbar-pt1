@@ -39,5 +39,15 @@ describe('each()', () => {
     });
     expect(count).toBe(3);
   });
+
+  it('iterates every element of an string, passing that element, its corresponding index, and the entire string to the callback', () => {
+    const str = 'abc';
+    let count = 0;
+    _.each(str, function(element, index, string) {
+      expect(element).toEqual(string[index]);
+      count += 1;
+    });
+    expect(count).toBe(3);
+  });
 });
 

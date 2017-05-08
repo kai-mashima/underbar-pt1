@@ -11,4 +11,14 @@ describe('pluck()', () => {
     expect(result).toEqual([12, 999, 14]);
   });
 
+  it('returns an array of just city names, given an array of places objects', () => {
+    const places = [
+      { name: 'SF'},
+      { name: 'LA'},
+      { name: 'NY'}
+    ];
+    const result = _.pluck(places, 'name');
+    expect(result).toEqual(['SF', 'LA', 'NY']);
+  });
+
 });
